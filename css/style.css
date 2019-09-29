@@ -1,8 +1,8 @@
-<style >
+<style > 
 	@import url('https://fonts.googleapis.com/css?family=Lato:300,400,600,700&display=swap');
-</style >
- <style > 
- 	@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600,700&display=swap');
+</style > 
+<style > 
+	@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600,700&display=swap');
 </style >
 * {
     padding: 0;
@@ -927,7 +927,8 @@ html {
 
 /* scroll-menu  */
 
-.scroll-menu ul li, .scroll-menu ul > li + li  {
+.scroll-menu ul li,
+.scroll-menu ul > li + li {
     margin: 0 0 0 -30px;
     width: 90px;
     line-height: 50px;
@@ -936,19 +937,23 @@ html {
     background: #fff;
     line-height: 20px;
     cursor: pointer;
+    position: relative;
 }
 
 .scroll-menu ul li:hover,
-.scroll-menu ul li.active{
-   margin-left: 0
+.scroll-menu ul li.active {
+    margin-left: 0;
 }
 
 .scroll-menu ul li a {
- 	margin-left: 25px;
+    margin-left: 25px;
     display: block;
     border-radius: 0;
-    position: relative;
-    
+}
+
+.scroll-menu ul li:hover .tooltip-menu {
+    opacity: 1;
+    visibility: visible;
 }
 
 .scroll-menu {
@@ -961,22 +966,84 @@ html {
     visibility: hidden;
 }
 
-/*  scroll-qc */
-.scroll-qc {
-	border: 1px solid #eee;
-	right: 0px !important;
-	background: #fff;
-	position: fixed;
-	top: 20%;
-	z-index: 10;
-	transition: all ease-in 0.4s;
-	opacity: 0;
-	visibility: hidden;
+.scroll-menu .tooltip-menu {
+    position: absolute;
+    left: 105%;
+    white-space: nowrap;
+    padding: 0 10px;
+    line-height: 26px;
+    height: 26px;
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #ed0000;
+    top: 12px;
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
 }
 
-.scroll-qc.visible,.scroll-menu.visible {
-	opacity: 1;
-	visibility: visible;
+.scroll-menu .tooltip-menu:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ed0000;
+    left: -5px;
+    top: 8px;
+    transform: rotate(45deg);
+}
+
+.scroll-menu .tooltip-menu.tooltip-yellow {
+    background: #eacd16;
+}
+
+.scroll-menu .tooltip-menu.tooltip-yellow:before {
+    background: #eacd16;
+}
+
+.scroll-menu .tooltip-menu.tooltip-purple {
+    background: #eb00dc;
+}
+
+.scroll-menu .tooltip-menu.tooltip-purple:before {
+    background: #eb00dc;
+}
+
+.scroll-menu .tooltip-menu.tooltip-blue {
+    background-color: #3F51B5;
+}
+
+.scroll-menu .tooltip-menu.tooltip-blue:before {
+    background-color: #3F51B5;
+}
+
+.scroll-menu .tooltip-menu.tooltip-orange {
+    background-color: #ffa040
+}
+
+.scroll-menu .tooltip-menu.tooltip-orange:before {
+    background-color: #ffa040;
+}
+
+/*  scroll-qc */
+.scroll-qc {
+    border: 1px solid #eee;
+    right: 0px !important;
+    background: #fff;
+    position: fixed;
+    top: 20%;
+    z-index: 10;
+    transition: all ease-in 0.4s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.scroll-qc.visible,
+.scroll-menu.visible {
+    opacity: 1;
+    visibility: visible;
 }
 
 .scroll-qc .icon {
