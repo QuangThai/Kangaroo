@@ -1,8 +1,8 @@
 <style > 
-	@import url('https://fonts.googleapis.com/css?family=Lato:300,400,600,700&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Lato:300,400,600,700&display=swap');
 </style > 
 <style > 
-	@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600,700&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600,700&display=swap');
 </style >
 * {
     padding: 0;
@@ -930,25 +930,25 @@ html {
 .scroll-menu ul li,
 .scroll-menu ul > li + li {
     margin: 0 0 0 -30px;
-    width: 90px;
-    line-height: 50px;
     transition: all 0.4s;
     border: 1px solid #e2e2e2;
     background: #fff;
+    width: 90px;
     line-height: 20px;
     cursor: pointer;
     position: relative;
 }
 
-.scroll-menu ul li:hover,
-.scroll-menu ul li.active {
-    margin-left: 0;
-}
-
 .scroll-menu ul li a {
-    margin-left: 25px;
     display: block;
     border-radius: 0;
+    transition: all 0.5s;
+    margin-left: 0;
+    text-indent: 5px;
+}
+
+.scroll-menu ul li a.active {
+    margin-left: 25px;
 }
 
 .scroll-menu ul li:hover .tooltip-menu {

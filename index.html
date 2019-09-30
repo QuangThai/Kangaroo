@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+<body data-spy="scroll" data-target="#navs" data-offset="50">
     <!-- header -->
     <header>
         <div id="header-top">
@@ -228,7 +228,7 @@
                                 <div class="slider-inner">
                                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                                         <div class="carousel-inner">
-                                            <div class="carousel-item active lightSpeedIn animated delay-1s">
+                                            <div class="carousel-item active jackInTheBox animated delay-1s">
                                                 <img src="images/slider-4.jpg" class="d-block w-100" alt="">
                                             </div>
                                             <div class="carousel-item zoomIn animated ">
@@ -237,7 +237,7 @@
                                             <div class="carousel-item animated fadeInDownBig">
                                                 <img src="images/slider-3.jpg" class="d-block w-100" alt="">
                                             </div>
-                                            <div class="carousel-item animated rotateInUpRight  delay-1s">
+                                            <div class="carousel-item animated rotateInUpRight delay-1s">
                                                 <img src="images/slider-1.jpg" class="d-block w-100" alt="">
                                             </div>
                                         </div>
@@ -287,7 +287,7 @@
         </section>
         <!-- End of slider-images !-->
         <!-- product -->
-        <section class="product" id='index_col_group_1'>
+        <section class="product" id="product-1">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 pr-0">
@@ -464,7 +464,7 @@
         </section>
         <!-- End of product-one -->
         <!-- product -->
-        <section class="product" id='index_col_group_1'>
+        <section class="product" id="product-2">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 pr-0">
@@ -658,7 +658,7 @@
         </section>
         <!-- End of product -->
         <!-- prodcut -->
-        <section class="product">
+        <section class="product" id="product-3">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 pr-0">
@@ -845,7 +845,7 @@
         </section>
         <!-- End of product-one -->
         <!-- product -->
-        <section class="product">
+        <section class="product" id="product-4">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 pr-0">
@@ -1034,7 +1034,7 @@
         </section>
         <!-- End of product-one -->
         <!-- product -->
-        <section class="product">
+        <section class="product" id="product-5">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 pr-0">
@@ -1215,7 +1215,7 @@
         </section>
         <!-- End of product-one -->
         <!-- product -->
-        <section class="product">
+        <section class="product" id="product-6">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 pr-0">
@@ -1405,7 +1405,7 @@
         </section>
         <!-- End of product-one -->
         <!-- product -->
-        <section class="product">
+        <section class="product" id="product-7">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 pr-0">
@@ -1592,7 +1592,7 @@
         </section>
         <!-- End of product-one -->
         <!-- product -->
-        <section class="product">
+        <section class="product" id="product-8">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 pr-0">
@@ -2245,57 +2245,59 @@
     <a href="" id="scrollUp"></a>
 
     <!-- myScrollspy  -->
-    <div class="scroll-menu">
-        <ul class="nav flex-column" id="myScrollspy">
-            <li class="nav-item">
-                <a class="nav-link" href="">
-                    <img src="images/scroll-1.png" alt="">
-                </a>
-                <span class="tooltip-menu">Máy lọc nước Hydrogen</span>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="">
-                    <img src="images/scroll-2.png" alt="">
-                </a>
-                <span class="tooltip-menu">Máy lọc nước Kangaroo</span>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="">
-                    <img src="images/scroll-3.png" alt="">
-                </a>
-                <span class="tooltip-menu">Cây nước Hàn Quốc</span>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="">
-                    <img src="images/scroll-4.png" alt="">
-                </a>
-                <span class="tooltip-menu">Cây nước liên doanh</span>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="">
-                    <img src="images/scroll-5.png" alt="">
-                </a>
-                <span class="tooltip-menu tooltip-yellow">Máy làm mát không khí</span>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="">
-                    <img src="images/scroll-6.png" alt="">
-                </a>
-                <span class="tooltip-menu tooltip-purple">Tủ đông - tủ mát Kangaroo</span>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="">
-                    <img src="images/scroll-7.png" alt="">
-                </a>
-                <span class="tooltip-menu tooltip-blue">Thiết bị mùa đông Kangaroo</span>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="images/scroll-8.png" alt="">
-                </a>
-                <span class="tooltip-menu tooltip-orange">Thiết bị nhà bếp</span>
-            </li>
-        </ul>
+    <div class="scroll-menu" id="navs">
+        <nav class="navbar navbar-inverse">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="#product-1">
+                        <img src="images/scroll-1.png" alt="">
+                    </a>
+                    <span class="tooltip-menu">Máy lọc nước Hydrogen</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#product-2">
+                        <img src="images/scroll-2.png" alt="">
+                    </a>
+                    <span class="tooltip-menu">Máy lọc nước Kangaroo</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#product-3">
+                        <img src="images/scroll-3.png" alt="">
+                    </a>
+                    <span class="tooltip-menu">Cây nước Hàn Quốc</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#product-4">
+                        <img src="images/scroll-4.png" alt="">
+                    </a>
+                    <span class="tooltip-menu">Cây nước liên doanh</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#product-5">
+                        <img src="images/scroll-5.png" alt="">
+                    </a>
+                    <span class="tooltip-menu tooltip-yellow">Máy làm mát không khí</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#product-6">
+                        <img src="images/scroll-6.png" alt="">
+                    </a>
+                    <span class="tooltip-menu tooltip-purple">Tủ đông - tủ mát Kangaroo</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#product-7">
+                        <img src="images/scroll-7.png" alt="">
+                    </a>
+                    <span class="tooltip-menu tooltip-blue">Thiết bị mùa đông Kangaroo</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#product-8">
+                        <img src="images/scroll-8.png" alt="">
+                    </a>
+                    <span class="tooltip-menu tooltip-orange">Thiết bị nhà bếp</span>
+                </li>
+            </ul>
+        </nav>
     </div>
     <!-- End of myScrolspy -->
     <!-- Scroll-qc -->
