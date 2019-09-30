@@ -14,8 +14,16 @@ body,
 html {
     width: 100%;
     overflow-x: hidden;
+    position: relative;
 }
-
+.img-product-fly {
+    position: absolute;
+    z-index: 999999999;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    transition: all 1s ease;
+}
 /* header -top */
 #header-top {
     position: relative;
@@ -136,7 +144,7 @@ html {
     position: relative;
 }
 
-#header-mid .cart .cart-number {
+#header-mid .cart #cart-number {
     position: absolute;
     top: -1px;
     right: -13px;
