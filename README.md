@@ -1,1 +1,2 @@
-# Kangaroo
+- Responsive cho mobile màn hình 320 với màn hình 375 
+- Hoàn thành !!!
