@@ -86,8 +86,6 @@
                                 <img src="images/cart.png" alt="">
                                 <span id="cart-number" data-count="0">0</span>
                             </a>
-
-
                         </div> <!-- End of cart -->
                         <div class="advertisement d-none d-lg-block ml-auto">
                             <a href="">
@@ -100,10 +98,17 @@
         </div> <!-- End of header-mid -->
 
         <!-- mobile -->
-        <nav class="mobile d-lg-none">
+        <nav class="mobile fixed-top d-lg-none">
             <a href="">
-                <img src="images/logo.png" alt="" style="max-width: 165px;margin-left: 24px;margin-top: -50px;">
+                <img src="images/logo.png" alt="" style="max-width: 140px;margin-left: 24px;margin-top: -50px;">
             </a>
+            <a href="" id="cart-shop">
+                <img src="images/cart.png" alt="">
+                <span id="cart-number" data-count="0">0</span>
+            </a>
+            <div class="cart ml-auto">
+
+            </div> <!-- End of cart -->
             <ul>
                 <li><a href="#">Trang chủ</a></li>
                 <li><a href="#">Giới thiệu</a>
@@ -146,10 +151,19 @@
                 <li><a href="">Đăng nhập / Đăng ký</a></li>
             </ul>
         </nav>
+        <div class="col-12 input-group d-lg-none">
+            <input type="text" class="form-control" placeholder="Tìm kiếm..." aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class=" btn-search btn" type="button" id="button-addon2">Tìm kiếm</button>
+            </div>
+        </div>
+
         <!-- mobile -->
     </header>
+
     <!-- End of header -->
     <main>
+
         <!-- banner -->
         <div id="banner">
             <div class="container">

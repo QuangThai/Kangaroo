@@ -1,9 +1,9 @@
-<style >
-     @import url('https://fonts.googleapis.com/css?family=Lato:300,400,600,700&display=swap');
-</style > 
 <style > 
+    @import url('https://fonts.googleapis.com/css?family=Lato:300,400,600,700&display=swap');
+</style > 
+<style >
     @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600,700&display=swap');
-</style >
+</style > 
 * {
     padding: 0;
     margin: 0;
@@ -1092,8 +1092,12 @@ html {
 }
 
 /* responsive cho di động */
+.mean-container .mean-bar {
+    position: fixed;
+}
+
 .mean-container .mean-nav ul li a {
-    font-size: 12px !important;
+    font-size: 13px !important;
     text-transform: none;
     cursor: pointer;
 }
@@ -1103,11 +1107,11 @@ html {
 }
 
 .mean-container .mean-nav ul li a.mean-expand {
-    height: 18px;
+    height: 20px;
 }
 
 .mean-container a.meanmenu-reveal {
-    top: 10px;
+    top: 20px;
     cursor: pointer;
 }
 
@@ -1117,6 +1121,30 @@ html {
 @media (max-width:576px) {
     .product .col-lg-7 {
         padding-left: 15px !important;
+    }
+
+    a#cart-shop {
+        position: relative;
+        top: -22px;
+        left: 80px;
+    }
+
+    #cart-shop img {
+        width: 39px;
+    }
+
+    span#cart-number {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #339933;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 20px;
+        font-size: 13px;
+        color: #fff;
+        top: -11px;
+        left: 15px;
     }
 
     .product {
@@ -1141,11 +1169,6 @@ html {
 
     .carousel-control-next {
         right: 20px !important
-    }
-
-    #header-mid .form-search input {
-        width: 259px;
-        display: block;
     }
 
     #header-mid .cart {
@@ -1193,15 +1216,29 @@ html {
     .social {
         margin-bottom: 10px
     }
+
+    .input-group {
+        position: relative;
+        top: 10px;
+        left: 0;
+        margin-top: 6rem !important;
+    }
+
+    .btn-search {
+        background-color: #F94F01;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+
+    .btn-search:hover {
+        background: #339933
+    }
 }
 
 
 
 @media (max-width: 320px) {
-    #header-mid .form-search input {
-        width: 203px;
-    }
-
     .product-single .product-desc .product-title h4 {
         margin-bottom: 20px;
         word-break: break-word;
@@ -1210,6 +1247,8 @@ html {
     .social {
         margin-bottom: 10px
     }
-}
 
-@media (max-width: 375px) {}
+    a#cart-shop {
+        left: 40px;
+    }
+}
