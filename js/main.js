@@ -1,4 +1,8 @@
 $(document).ready(function () {
+
+    // meanmenu
+    jQuery('.mobile').meanmenu();
+
     // sticky
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
@@ -57,7 +61,7 @@ $(document).ready(function () {
     });
 
     // add to cart
-    $(document).on('click','.btn-buy', function(e){
+    $(document).on('click', '.btn-buy', function (e) {
         e.preventDefault();
         var parent = $(this).parents('.product-single');
         var cart = $(document).find('#cart-shop');
@@ -68,22 +72,22 @@ $(document).ready(function () {
             class: 'img-product-fly',
             src: src
         }).appendTo('body').css({
-            'top':parTop,
-            'left':parseInt(parLeft) + parseInt(parent.width()) -50
+            'top': parTop,
+            'left': parseInt(parLeft) + parseInt(parent.width()) - 50
         });
 
-        setTimeout(function(){
+        setTimeout(function () {
             $(document).find('.img-product-fly').css({
-                'top' : cart.offset().top,
-                'left' : cart.offset().left
+                'top': cart.offset().top,
+                'left': cart.offset().left
             });
-            setTimeout(function(){
-                 $(document).find('.img-product-fly').remove();
-                var countItem = parseInt(cart.find('#cart-number').data('count'))+1 ;
-                cart.find('#cart-number').text(countItem).data('count',countItem);
-            },1000);
+            setTimeout(function () {
+                $(document).find('.img-product-fly').remove();
+                var countItem = parseInt(cart.find('#cart-number').data('count')) + 1;
+                cart.find('#cart-number').text(countItem).data('count', countItem);
+            }, 1000);
 
-        },500);
+        }, 500);
     });
 });
 
