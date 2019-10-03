@@ -1,7 +1,7 @@
 <style > 
     @import url('https://fonts.googleapis.com/css?family=Lato:300,400,600,700&display=swap');
 </style > 
-<style >
+<style > 
     @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600,700&display=swap');
 </style > 
 * {
@@ -948,6 +948,10 @@ html {
     position: relative;
 }
 
+.scroll-menu ul li.active {
+    margin-left: 25px;
+}
+
 .scroll-menu ul li a {
     display: block;
     border-radius: 0;
@@ -1123,6 +1127,40 @@ html {
         padding-left: 15px !important;
     }
 
+    .title-inner {
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+        background: #FF0000;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+
+    .product-overlay {
+        display: none;
+    }
+
+    #btn-add {
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        background: #339933;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 13px;
+    }
+
+    .product-single .product-desc .product-price {
+        margin-top: 5px;
+        margin-bottom: -13px;
+    }
+
     a#cart-shop {
         position: relative;
         top: -22px;
@@ -1149,6 +1187,7 @@ html {
 
     .product {
         padding-top: 0;
+        margin-bottom: 70px;
     }
 
     .product-list {
@@ -1234,8 +1273,11 @@ html {
     .btn-search:hover {
         background: #339933
     }
-}
 
+    .prize h4 {
+        margin-bottom: 5px
+    }
+}
 
 
 @media (max-width: 320px) {
