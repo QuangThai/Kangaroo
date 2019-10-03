@@ -1,2 +1,2 @@
-- Responsive cho mobile màn hình 320 với màn hình 375 
+- Responsive cho mobile màn hình 320 ,  375 , 425 ( Mobile First ) 
 - Hoàn thành !!!
