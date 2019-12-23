@@ -1,10 +1,7 @@
-<style > 
-    @import url('https://fonts.googleapis.com/css?family=Lato:300,400,600,700&display=swap');
-</style > 
-<style > 
-    @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600,700&display=swap');
-</style > 
-* {
+<style > @import url('https://fonts.googleapis.com/css?family=Lato:300,400,600,700&display=swap');
+</style > <style > @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600,700&display=swap');
+
+</style > * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -26,7 +23,7 @@ html {
     transition: all 1s ease;
 }
 
-/* header -top */
+/* header-top */
 #header-top {
     position: relative;
     height: 135px;
@@ -935,29 +932,33 @@ html {
 
 
 /* scroll-menu  */
+.scroll-menu ul {
+    margin: 0;
+    display: block;
+}
 
-.scroll-menu ul li,
+.scroll-menu ul > li,
 .scroll-menu ul > li + li {
-    margin: 0 0 0 -30px;
+    margin-left: -30px;
     transition: all 0.4s;
     border: 1px solid #e2e2e2;
     background: #fff;
     width: 90px;
-    line-height: 20px;
     cursor: pointer;
     position: relative;
+    list-style: none;
+    line-height: 50px;
 }
 
+.scroll-menu ul li:hover,
 .scroll-menu ul li.active {
-    margin-left: 25px;
+    margin-left: 0px;
 }
 
 .scroll-menu ul li a {
-    display: block;
     border-radius: 0;
     transition: all 0.5s;
-    margin-left: 0;
-    text-indent: 5px;
+    padding-left: 42px;
 }
 
 .scroll-menu ul li a.active {
@@ -1119,6 +1120,211 @@ html {
     cursor: pointer;
 }
 
+
+/*************************
+  11. quick view (modal)
+*************************/
+.social-icons li {
+    list-style-type: none;
+    transition: all 0.3s;
+}
+
+.social-icons li:nth-child(1) {
+    background: #3B5998;
+    color: #fff;
+}
+
+.social-icons li:nth-child(2) {
+    background: #DD493D;
+    color: #fff;
+}
+
+.social-icons li:nth-child(3) {
+    background: #1DA1F2;
+    color: #fff;
+}
+
+.social-icons li:nth-child(4) {
+    background: #cb2027;
+    color: #fff;
+}
+
+.social-icons li:nth-child(5) {
+    background: #F36F24;
+    color: #fff;
+}
+
+#productModal .modal-dialog {
+    margin: 5% auto;
+    max-width: 96%;
+    min-height: 300px;
+    padding: 20px;
+    width: 870px;
+}
+
+#quickview-wrapper .modal-content {
+    border-radius: 0;
+}
+
+#productModal .modal-header {
+    border: 0 none;
+    padding: 0;
+}
+
+#productModal button.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transition: all 0.3s ease 0s;
+    z-index: 2;
+}
+
+#productModal button.close span {
+    border: 1px solid #909295;
+    border-radius: 60px;
+    color: #909295;
+    display: block;
+    height: 30px;
+    line-height: 22px;
+    padding-top: 1px;
+    text-align: center;
+    width: 30px;
+}
+
+#productModal button.close:hover {
+    opacity: 1;
+}
+
+.modal-product .product-images {
+    float: left;
+    width: 40%;
+}
+
+.modal-product .product-images .main-image {
+    width: 100%;
+}
+
+.modal-product .product-images .main-image img {
+    width: 100%;
+}
+
+.modal-product .product-info {
+    background: #ffffff;
+    float: left;
+    padding: 15px 15px 18px 30px;
+    text-align: left;
+    width: 60%;
+}
+
+.modal-product .product-info h1 {
+    color: #666;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+}
+
+.s-price-box {
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+    display: block;
+    padding: 10px 0;
+}
+
+.s-price-box .new-price {
+    color: #666;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.s-price-box .old-price {
+    color: #a6a6a6;
+    font-size: 15px;
+    text-decoration: line-through;
+}
+
+.modal-product .product-info .see-all {
+    color: red;
+    display: inline-block;
+    margin: 15px 0 20px;
+    text-decoration: underline;
+}
+
+.modal-product .product-info .quick-add-to-cart {
+    border-bottom: 1px solid #e5e5e5;
+    float: left;
+    margin: 0 0 15px;
+    padding: 0 0 30px;
+    width: 100%;
+}
+
+.quick-add-to-cart .numbers-row > input {
+    border: 1px solid #e5e5e5;
+    float: left;
+    height: 45px;
+    text-align: center;
+    width: 100px;
+}
+
+.quick-add-to-cart .single_add_to_cart_button {
+    background: #666 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 3px;
+    color: #ffffff;
+    float: left;
+    font-weight: 700;
+    height: 45px;
+    margin-left: 15px;
+    padding: 0 55px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+
+.quick-add-to-cart .single_add_to_cart_button {
+    background: #339933 none repeat scroll 0 0;
+}
+
+.modal-product .product-info .quick-desc {
+    border-bottom: 1px solid #e5e5e5;
+    color: #909295;
+    margin-bottom: 10px;
+    padding: 0 0 15px;
+}
+
+.widget-title-modal {
+    color: #42414f;
+    font-size: 16px;
+    line-height: 30px;
+    margin: 0 0 5px;
+    text-transform: none;
+    width: 100%;
+}
+
+.modal-product .widget .social-icons li {
+    float: left;
+    margin-right: 10px;
+}
+
+.modal-product .widget .social-icons li a {
+    border: 1px solid #e5e5e5;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    height: 40px;
+    line-height: 38px;
+    text-align: center;
+    width: 40px;
+}
+
+.modal-product .widget .social-icons li a:hover {
+    color: #ffffff;
+}
+
+
+
+
 /*  */
 
 /* responsive cho di động */
@@ -1275,7 +1481,8 @@ html {
     }
 
     .prize h4 {
-        margin-bottom: 5px
+        margin-bottom: 5px;
+        font-size: 15px;
     }
 }
 
@@ -1292,5 +1499,15 @@ html {
 
     a#cart-shop {
         left: 40px;
+    }
+}
+
+@media (min-width: 768px) and (max-width:991px) {
+    .title-inner {
+        display: none;
+    }
+
+    .col-banner {
+        display: none !important;
     }
 }

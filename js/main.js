@@ -1,8 +1,24 @@
 $(document).ready(function () {
 
+    //pass the images to Fancybox
+     $("#zoom_03").elevateZoom({
+        constrainType: "height",
+        zoomType: "lens",
+        containLensZoom: true,
+        gallery: 'gallery_01',
+        cursor: 'pointer',
+        galleryActiveClass: "active"
+    });
+
+    $("#zoom_03").on("click", function(e) {
+        var ez = $('#zoom_03').data('elevateZoom');
+        $.fancybox(ez.getGalleryList());
+        return false;
+    });
+
+
     // meanmenu
     jQuery('.mobile').meanmenu();
-
     // sticky
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
@@ -21,7 +37,7 @@ $(document).ready(function () {
     });
 
     // Carousel
-    $('.owl-carousel').owlCarousel({
+    $('.slider-images-wrapper').owlCarousel({
         loop: true,
         autoplay: true,
         margin: 2,
@@ -44,6 +60,22 @@ $(document).ready(function () {
             }
         }
     });
+    $('.thumnail-item').owlCarousel({
+        
+        loop: true,
+        autoplay: true,
+        margin: 2,
+        nav: false,
+        responsive: {
+            0: {
+                items: 2
+            },
+            480: {
+                items: 4
+            },
+           
+        }
+    });
 
     // Tooltip
     $(function () {
@@ -54,9 +86,9 @@ $(document).ready(function () {
     $(window).scroll(function () {
         var height = $(window).scrollTop();
         if (height >= 500) {
-            $('.scroll-menu, .scroll-qc').addClass('visible');
+            $('.scroll-menu, .scroll-qc').addClass("visible");
         } else {
-            $('.scroll-menu, .scroll-qc').removeClass('visible');
+            $('.scroll-menu, .scroll-qc').removeClass("visible");
         }
     });
 
@@ -89,15 +121,6 @@ $(document).ready(function () {
 
         }, 500);
     });
+
 });
 
-
-
-
-
-// Khẳng định hay bác bỏ {A}P{B}?
-// Mệnh đề  { A: x<-y; x<2; x,y thuộc R}
-//  		{ B: y>-x+1; x,y thuộc R}
-//  		Đoạn trình P 
-//  			y:=x^2-3
-//  			x:-x+1;

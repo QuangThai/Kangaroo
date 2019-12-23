@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kangaroo Hà Nội</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/meanmenu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+        .pay-price {
+            background-color: #F94F01;
+            border-color: #F94F01
+        }
+
+        .total,
+        .price-total {
+            font-family: 'Lato', sans-serif;
+        }
+
+        .price-total {
+            color: #339933;
+        }
+
+        tr,
+        td {
+            text-align: center;
+            vertical-align: middle !important;
+            font-family: 'Lato', sans-serif;
+            font-size: 15px;
+        }
+
+        .img-product {
+            width: 40%;
+            height: 30%;
+        }
+
+        .quantity {
+            position: relative;
+            left: 5px;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        .quantity input {
+            width: 80px;
+            height: 50px;
+            line-height: 1.65;
+            float: left;
+            display: block;
+            padding: 0;
+            margin: 0;
+            padding-left: 20px;
+            border: 1px solid #eee;
+        }
+
+        .quantity input:focus {
+            outline: 0;
+        }
+
+        .quantity-nav {
+            float: left;
+            position: relative;
+            height: 50px;
+        }
+
+        .quantity-button {
+            position: relative;
+            cursor: pointer;
+            border-left: 1px solid #eee;
+            width: 35px;
+            text-align: center;
+            color: #333;
+            font-size: 18px;
+            font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+            line-height: 1.7;
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+
+        .quantity-button.quantity-up {
+            position: absolute;
+            height: 50%;
+            top: 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .quantity-button.quantity-down {
+            position: absolute;
+            bottom: -1px;
+            height: 50%;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#myScroll" data-offset="50">
+
+    <!-- header -->
+    <header>
+        <div id="header-top" class="d-none d-lg-block">
+            <div class="text-center ">
+                <a href=""><img src="images/banner.jpg" alt="banner"></a>
+            </div>
+            <div class="container">
+                <nav class="menu-top d-none d-lg-block">
+                    <ul class="d-flex align-items-center justify-content-end">
+                        <li class="active"><a href="">Trang chủ</a></li>
+                        <li><a href="">Giới thiệu <i class="fas fa-angle-down"></i></a>
+                            <ul class="sub-menu">
+                                <li><a href="">Về chúng tôi</a></li>
+                                <li><a href="">Hình thức mua hàng</a></li>
+                                <li><a href="">Hình thức thanh toán</a></li>
+                                <li><a href="">Chính sách bảo mật</a></li>
+                                <li><a href="">Tư vấn</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Sản phẩm <i class="fas fa-angle-down"></i></a>
+                            <ul class="sub-menu">
+                                <li><a href="">Máy lọc nước Hydrogen</a></li>
+                                <li><a href="">Máy lọc nước RO Kangaroo</a></li>
+                                <li><a href="">Lọc đầu nguồn - Lọc tinh khiết</a></li>
+                                <li><a href="">Cây nóng lạnh Kangaroo</a></li>
+                                <li><a href="">Tủ đông - Tủ mát Kangaroo</a></li>
+                                <li><a href="">Quạt điều hòa Kangaroo</a></li>
+                                <li><a href="">Gia dụng Kangaroo</a></li>
+                                <li><a href="">Thiết bị mùa đông Kangaroo</a></li>
+                                <li><a href="">Thiết bị nhà bếp Kangaroo</a></li>
+                                <li><a href="">Thiết bị vệ sinh Kangaroo</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Khuyến mãi & Sự kiện</a></li>
+                        <li><a href="">Tin tức <i class="fas fa-angle-down"></i></a>
+                            <ul class="sub-menu">
+                                <li><a href="">Tư vấn Máy lọc nước Kangaroo</a></li>
+                                <li><a href="">Tư vấn và thay thế Lõi lọc Kangaroo</a></li>
+                                <li><a href="">Tư vấn Cây nước nóng lạnh Kangaro</a></li>
+                                <li><a href="">Tư vấn Thiết bị mùa đông Kangaroo</a></li>
+                                <li><a href="">Tư vấn Tủ đông, tủ mát Kangaroo</a></li>
+                                <li><a href="">Tư vấn Mặt hàng gia dụng Kangaroo</a></li>
+                                <li><a href="">Tư vấn Thiết bị nhà bếp Kangaroo</a></li>
+                                <li><a href="">Tin thời sự Kangaroo</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a href="">Tài khoản</a></li>
+                        <li><a href="">Đăng nhập / Đăng ký</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div> <!-- End of header-top -->
+        <div id="header-mid" class="d-none d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <a href="">
+                            <img src="images/logo.png" alt="" class="logo">
+                        </a>
+                    </div> <!-- End of col-lg-3 -->
+                    <div class="col-lg-9 col-12 d-flex align-items-center">
+                        <div class="form-search d-flex">
+                            <input type="text" name="" placeholder="Tìm kiếm...">
+                            <button class="btn-search">Tìm kiếm</button>
+                        </div>
+                        <div class="cart ml-auto">
+                            <a href="" id="cart-shop">
+                                <img src="images/cart.png" alt="">
+                                <span id="cart-number" data-count="0">0</span>
+                            </a>
+                        </div> <!-- End of cart -->
+                        <div class="advertisement d-none d-lg-block ml-auto">
+                            <a href="">
+                                <img src="images/qcao-top.jpg" alt="">
+                            </a>
+                        </div> <!-- End of advertisement -->
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End of header-mid -->
+
+        <!-- mobile -->
+        <nav class="mobile fixed-top d-lg-none">
+            <a href="">
+                <img src="images/logo.png" alt="" style="max-width: 140px;margin-left: 24px;margin-top: -50px;">
+            </a>
+            <a href="" id="cart-shop">
+                <img src="images/cart.png" alt="">
+                <span id="cart-number" data-count="0">0</span>
+            </a>
+            <div class="cart ml-auto">
+
+            </div> <!-- End of cart -->
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Giới thiệu</a>
+                    <ul>
+                        <li><a href="">Về chúng tôi</a></li>
+                        <li><a href="">Hình thức giao hàng</a></li>
+                        <li><a href="">Hình thức thanh toán</a></li>
+                        <li><a href="">Chính sách bảo mật</a></li>
+                        <li><a href="">Tư vấn</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Sản phẩm</a>
+                    <ul>
+                        <li><a href="">Máy lọc nước Hydrogen</a></li>
+                        <li><a href="">Máy lọc nước RO Kangaroo</a></li>
+                        <li><a href="">Lọc đầu nguồn - Lọc tinh khiết</a></li>
+                        <li><a href="">Cây nóng lạnh Kangaroo</a></li>
+                        <li><a href="">Tủ đông - Tủ mát Kangaroo</a></li>
+                        <li><a href="">Quạt điều hòa Kangaroo</a></li>
+                        <li><a href="">Gia dụng Kangaroo</a></li>
+                        <li><a href="">Thiết bị mùa đông Kangaroo</a></li>
+                        <li><a href="">Thiết bị nhà bếp Kangaroo</a></li>
+                        <li><a href="">Thiết bị vệ sinh Kangaroo</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Khuyến mãi & Sự kiện</a></li>
+                <li><a href="#">Tin tức</a>
+                    <ul>
+                        <li><a href="">Tư vấn Máy lọc nước Kangaroo</a></li>
+                        <li><a href="">Tư vấn và thay thế Lõi lọc Kangaroo</a></li>
+                        <li><a href="">Tư vấn Cây nước nóng lạnh Kangaro</a></li>
+                        <li><a href="">Tư vấn Thiết bị mùa đông Kangaroo</a></li>
+                        <li><a href="">Tư vấn Tủ đông, tủ mát Kangaroo</a></li>
+                        <li><a href="">Tư vấn Mặt hàng gia dụng Kangaroo</a></li>
+                        <li><a href="">Tư vấn Thiết bị nhà bếp Kangaroo</a></li>
+                        <li><a href="">Tin thời sự Kangaroo</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Tài khoản</a></li>
+                <li><a href="">Đăng nhập / Đăng ký</a></li>
+            </ul>
+        </nav>
+        <div class="col-12 input-group d-lg-none">
+            <input type="text" class="form-control" placeholder="Tìm kiếm..." aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class=" btn-search btn" type="button" id="button-addon2">Tìm kiếm</button>
+            </div>
+        </div>
+
+        <!-- mobile -->
+    </header>
+    <main>
+        <!-- banner -->
+        <div id="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="box-menu">
+                            <div class="menu-left">
+                                <h4>Danh mục sản phẩm <i class="fas fa-angle-right" data-toggle="collapse" data-target="#demo"></i></h4>
+                            </div>
+                            <div class="menu-content collapse" id="demo">
+                                <ul class="menu-body">
+                                    <li><a href=""><img src="images/menu-1.jpg" data-hieuung="tooltip" data-placement="right" title="Máy lọc nước Hydrogen" alt=""> Máy lọc nước Hydrogen</a></li>
+                                    <li>
+                                        <a href="#demo1" data-toggle="collapse" data-target="#demo1">
+                                            <img src="images/menu-2.jpg" data-hieuung="tooltip" data-placement="right" title="Máy lọc nước RO Kangaroo" alt=""> Máy lọc nước RO Kangaroo
+                                            <i class="fas fa-angle-right"></i>
+                                        </a>
+                                        <ul class="submenu-left d-none d-lg-block">
+                                            <li><a href="" class="sub-a">Lõi lọc nước Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Linh kiện máy lọc nước Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Máy lọc nước Kangaroo Vỏ tủ VTU</a></li>
+                                            <li><a href="" class="sub-a">Máy lọc nước Kangaroo Vỏ tủ inox</a></li>
+                                            <li><a href="" class="sub-a">Máy lọc nước Kangaroo Không vỏ tủ</a></li>
+                                        </ul>
+
+                                        <!-- mobile sidebar -->
+                                        <div class="collapse d-lg-none" id="demo1">
+                                            <ul>
+                                                <li><a href="" class="sub-a">Lõi lọc nước Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Linh kiện máy lọc nước Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Máy lọc nước Kangaroo Vỏ tủ VTU</a></li>
+                                                <li><a href="" class="sub-a">Máy lọc nước Kangaroo Vỏ tủ inox</a></li>
+                                                <li><a href="" class="sub-a">Máy lọc nước Kangaroo Không vỏ tủ</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- mobile sidebar -->
+
+                                    </li>
+                                    <li><a href=""><img src="images/menu-3.png" data-hieuung="tooltip" data-placement="right" title="Lọc đầu nguồn - Lọc tinh khiết" alt=""> Lọc đầu nguồn - Lọc tinh khiết</a></li>
+                                    <li>
+                                        <a href="#demo2" data-toggle="collapse" data-target="#demo2">
+                                            <img src="images/menu-4.jpg" data-hieuung="tooltip" data-placement="right" title="Cây nóng lạnh Kangaroo" alt="">Cây nóng lạnh Kangaroo <i class="fas fa-angle-right"></i>
+                                        </a>
+                                        <ul class="submenu-left d-none d-lg-block">
+                                            <li><a href="" class="sub-a">Cây nước nóng lạnh Kangaroo liên doanh</a></li>
+                                            <li><a href="" class="sub-a">Cây nước nóng lạnh Kangaroo Hàn Quốc</a></li>
+                                            <li><a href="" class="sub-a">Lõi lọc Cây nước nóng lạnh Kangaroo</a></li>
+                                        </ul>
+                                        <!-- mobile sidebar -->
+                                        <div class="collapse d-lg-none" id="demo2">
+                                            <ul>
+                                                <li><a href="" class="sub-a">Cây nước nóng lạnh Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Cây nước nóng lạnh Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Lõi lọc Cây nước nóng lạnh Kangaroo</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- mobile sidebar -->
+                                    </li>
+                                    <li><a href="demo3" data-toggle="collapse" data-target="#demo3">
+                                            <img src="images/menu-5.png" data-hieuung="tooltip" data-placement="right" title="Tủ đông - Tủ mát Kangaroo" alt=""> Tủ đông - Tủ mát Kangaroo <i class="fas fa-angle-right"></i>
+                                        </a>
+                                        <ul class="submenu-left d-none d-lg-block">
+                                            <li><a href="" class="sub-a">Tủ đông Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Tủ mát Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Tủ kem kháng khuẩn Kangaroo</a></li>
+                                        </ul>
+
+                                        <!-- mobile sidebar -->
+                                        <div class="collapse d-lg-none" id="demo3">
+                                            <ul>
+                                                <li><a href="" class="sub-a">Tủ đông Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Tủ mát Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Tủ kem kháng khuẩn Kangaroo</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- mobile sidebar -->
+                                    </li>
+                                    <li><a href=""><img src="images/menu-6.jpg" data-hieuung="tooltip" data-placement="right" title="Quạt điều hòa Kangaro" alt=""> Quạt điều hòa Kangaroo </a></li>
+                                    <li><a href="demo4" data-toggle="collapse" data-target="#demo4">
+                                            <img src="images/menu-7.jpg" data-hieuung="tooltip" data-placement="right" title="Gia dụng Kangaroo " alt=""> Gia dụng Kangaroo <i class="fas fa-angle-right"></i>
+                                        </a>
+                                        <ul class="submenu-left d-none d-lg-block">
+                                            <li><a href="" class="sub-a">Máy làm sữa chua, đậu nành, rau mầm Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Ấm đun nước siêu tốc Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Cây lau nhà đa năng Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Máy sấy tóc Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Bàn là hơi nước Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Đèn led Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Két sắt, két bạc Kangaroo</a>
+                                                <ul class="submenu-left d-none d-lg-block">
+                                                    <li><a href="" class="sub-a">Két khách sạn Kangaroo</a></li>
+                                                    <li><a href="" class="sub-a">Két phào Kangaroo</a></li>
+                                                    <li><a href="" class="sub-a">Két vuông Kangaroo</a></li>
+                                                    <li><a href="" class="sub-a">Két ngang Kangaroo</a></li>
+                                                    <li><a href="" class="sub-a">Két nhập khẩu Kangaroo</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="" class="sub-a">Cân hạnh phúc Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Xịt rửa cao áp Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Máy bơm kháng khuẩn</a></li>
+                                        </ul>
+
+                                        <!-- mobile sidebar -->
+                                        <div class="collapse d-lg-none" id="demo4">
+                                            <ul>
+                                                <li><a href="" class="sub-a">Máy làm sữa chua, đậu nành</a></li>
+                                                <li><a href="" class="sub-a">Ấm đun nước siêu tốc Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Cây lau nhà đa năng Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Máy sấy tóc Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Bàn là hơi nước Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Đèn led Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Két sắt, két bạc Kangaroo</a>
+                                                <li><a href="" class="sub-a">Cân hạnh phúc Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Xịt rửa cao áp Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Máy bơm kháng khuẩn</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- mobile sidebar -->
+                                    </li>
+                                    <li>
+                                        <a href="demo5" data-toggle="collapse" data-target="#demo5">
+                                            <img src="images/menu-8.png" data-hieuung="tooltip" data-placement="right" title="Thiết bị mùa đông Kangaroo " alt=""> Thiết bị mùa đông Kangaroo <i class="fas fa-angle-right"></i>
+                                        </a>
+                                        <ul class="submenu-left d-none d-lg-block">
+                                            <li><a href="" class="sub-a">Đèn sưởi Halogen Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Vòi nước nóng trực tiếp Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Máy sấy quần áo Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Bình nước nóng Kangaroo</a>
+                                                <ul class="submenu-left d-none d-lg-block">
+                                                    <li><a href="" class="sub-a">Bình nước nóng gián tiếp Kangaroo</a></li>
+                                                    <li><a href="" class="sub-a">Bình nước nóng trực tiếp Kangaroo</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="" class="sub-a">Đèn sưởi ấm nhà tắm Kangaroo</a></li>
+                                        </ul>
+                                        <!-- mobile sidebar -->
+                                        <div class="collapse d-lg-none" id="demo5">
+                                            <ul>
+                                                <li><a href="" class="sub-a">Đèn sưởi Halogen Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Vòi nước nóng trực tiếp Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Máy sấy quần áo Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Bình nước nóng Kangaroo</a>
+                                                <li><a href="" class="sub-a">Đèn sưởi ấm nhà tắm Kangaroo</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- mobile sidebar -->
+                                    </li>
+                                    <li>
+                                        <a href="demo6" data-toggle="collapse" data-target="#demo6">
+                                            <img src="images/menu-9.png" data-hieuung="tooltip" data-placement="right" title="Thiết bị nhà bếp Kangaroo" alt=""> Thiết bị nhà bếp Kangaroo <i class="fas fa-angle-right"></i>
+                                        </a>
+                                        <ul class="submenu-left d-none d-lg-block">
+                                            <li><a href="" class="sub-a">Bếp điện từ, hồng ngoại Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Lò nướng Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Máy hút mùi Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Nồi cơm điện Kangaroo</a>
+                                                <ul class="submenu-left d-none d-lg-block">
+                                                    <li><a href="" class="sub-a">Nồi cơm điện tử Kangaroo</a></li>
+                                                    <li><a href="" class="sub-a">Nồi cơm cơ Kangaroo</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="" class="sub-a">Nồi áp suất Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Bộ nồi inox, nồi nhôm Kangaroo</a>
+                                                <ul class="submenu-left d-none d-lg-block">
+                                                    <li><a href="" class="sub-a">Bộ nồi Inox Kangaroo</a></li>
+                                                    <li><a href="" class="sub-a">Bộ nồi nhôm Kangaroo</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="" class="sub-a">Nồi lẩu Kangaroo</a>
+                                                <ul class="submenu-left d-none d-lg-block">
+                                                    <li><a href="" class="sub-a">Nồi lẫu điện Kangaroo</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="" class="sub-a">Nồi hấp inox Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Chảo Kangaroo</a>
+                                                <ul class="submenu-left d-none d-lg-block">
+                                                    <li><a href="" class="sub-a">Chảo 2 mặt Kangaroo</a></li>
+                                                    <li><a href="" class="sub-a">Chảo chống dính Kangaroo</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="" class="sub-a">Máy xay thịt Kangaroo</a></li>
+                                        </ul>
+
+                                        <!-- mobile sidebar -->
+                                        <div class="collapse d-lg-none" id="demo6">
+                                            <ul>
+                                                <li><a href="" class="sub-a">Bếp điện từ, hồng ngoại Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Lò nướng Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Máy hút mùi Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Nồi cơm điện Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Nồi áp suất Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Bộ nồi inox, nồi nhôm Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Nồi lẩu Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Nồi hấp inox Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Máy xay thịt Kangaroo</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- mobile sidebar -->
+                                    </li>
+                                    <li>
+                                        <a href="demo7" data-toggle="collapse" data-target="#demo7">
+                                            <img src="images/menu-10.jpg" data-hieuung="tooltip" data-placement="right" title="Thiết bị vệ sinh Kangaroo" alt=""> Thiết bị vệ sinh Kangaroo <i class="fas fa-angle-right"></i> </a>
+                                        <ul class="submenu-left d-none d-lg-block">
+                                            <li><a href="" class="sub-a">Bàn cầu Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Bồn tiểu nam Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Chậu rửa Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Chậu rửa inox kháng khuẩn Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Máy nước nóng năng lượng mặt trời Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Sen vòi Kangaroo</a></li>
+                                            <li><a href="" class="sub-a">Vòi chậu rửa bát Kangaroo</a></li>
+                                        </ul>
+
+                                        <!-- mobile sidebar -->
+                                        <div class="collapse d-lg-none" id="demo7">
+                                            <ul>
+                                                <li><a href="" class="sub-a">Bàn cầu Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Bồn tiểu nam Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Chậu rửa Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Chậu rửa inox kháng khuẩn Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Máy nước nóng năng lượng mặt trời</a></li>
+                                                <li><a href="" class="sub-a">Sen vòi Kangaroo</a></li>
+                                                <li><a href="" class="sub-a">Vòi chậu rửa bát Kangaroo</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- mobile sidebar -->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> <!-- End of col-lg-3 -->
+
+                    <!-- Mobile Sidebar -->
+
+                    <!-- End Mobile Sidebar -->
+
+                    <div class="col-lg-9 p-0">
+                        <div class="row">
+                            <div class="col-lg-9 p-0">
+                                <a href="" class="d-none d-lg-block">
+                                    <img src="images/slider-qc.jpg" alt="">
+                                </a>
+
+                            </div> <!-- End of slider-inner -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </main>
+
+    <div class="container pt-5">
+        <table class="table table-hover table-bordered shadow">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Sản phẩm</th>
+                    <th scope="col">Mô tả</th>
+                    <th scope="col">Đơn giá</th>
+                    <th scope="col">Số lượng</th>
+                    <th scope="col">Thành tiền</th>
+                    <th scope="col">Xóa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img class="img-product" src="images/product-1.jpg"></td>
+                    <td>Máy lọc nước Kangaroo Hydrogen KG100HC vỏ tủ VTU</td>
+                    <td>8.290.000₫</td>
+                    <td>
+                        <form action="#" method="post">
+                            <div class="quantity">
+                                <input type="number" min="1" name="sl" max="1000" step="1" value="1">
+                            </div>
+                        </form>
+                    </td>
+                    <td>33.160.000₫</td>
+                    <td><button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></td>
+                </tr>
+                <tr>
+                    <td><img class="img-product" src="images/product-2.jpg"></td>
+                    <td>Máy lọc nước Kangaroo Hydrogen KG100HC vỏ tủ VTU</td>
+                    <td>8.290.000₫</td>
+                    <td>
+                        <form action="#" method="post">
+                            <div class="quantity">
+                                <input type="number" min="1" name="sl" max="1000" step="1" value="1">
+                            </div>
+                        </form>
+                    </td>
+                    <td>33.160.000₫</td>
+                    <td><button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></td>
+                </tr>
+
+            </tbody>
+        </table>
+        <h4 class="text-right my-4 total">Tổng tiền :
+            <span class="price-total">33.160.000₫</span>
+        </h4>
+        <div class="d-flex justify-content-end align-items-center">
+            <a href="" class="btn btn-success text-uppercase">Mua tiếp</a>
+            <a href="" class="btn btn-success ml-3 text-uppercase">Cập nhật</a>
+            <a href="" class="btn btn-success ml-3 text-uppercase pay-price">Thanh toán</a>
+        </div>
+    </div>
+    <footer class="dark">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <a href=""><img src="images/ft-img.png" alt=""></a>
+                        <p></p>
+                        <p>Nhà phân phối chính thức các sản phẩm chính hãng của tập đoàn Kangaroo</p>
+                        <a href=""><img src="images/ft-img-2.png" alt=""></a>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="list-ft">
+                            <h4>Giới thiệu</h4>
+                            <ul>
+                                <li><a href="">Về chúng tôi</a></li>
+                                <li><a href="">Hình thức mua hàng</a></li>
+                                <li><a href="">Hình thức thanh toán</a></li>
+                                <li><a href="">Chính sách bảo mật</a></li>
+                                <li><a href="">Tư vấn</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="list-ft">
+                            <h4>Thông tin trợ giúp</h4>
+                            <ul>
+                                <li><a href="">Hướng dẫn mua hàng</a></li>
+                                <li><a href="">Vận chuyển và giao hàng</a></li>
+                                <li><a href="">Đổi và trả hàng</a></li>
+                                <li><a href="">Chính sách bảo hành</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="list-ft">
+                            <h4>Thông tin trợ giúp</h4>
+                            <p></p>
+                            <i class="fas fa-map-marker-alt"></i>&ensp;&nbsp;<span>Số 1 Nguyễn Xiển, Thanh Xuân, Hà Nội</span>
+                            <br>
+                            <i class="fas fa-phone-alt"></i>&ensp;&nbsp;<span>CSKH: 0981.926.011 - 0914.666.512</span>
+                            <br>
+                            <i class="fas fa-envelope"></i>&ensp;&nbsp;<span>lienhe@kangaroohanoi.vn</span>
+                            <br>
+                            <span>Giấy chứng nhận đăng ký doanh nghiệp số 010 6411 810 do Sở kế hoạch và Đầu tư Thành phố Hà Nội cấp ngày 06/01/2014</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-mid text-center">
+                <h4>Hình thức thanh toán</h4>
+                <img src="images/ft-img-3.png" alt="">
+            </div>
+
+        </div>
+        <div class="footer-bot">
+            <div class="container">
+                <a href="/">Trang chủ</a>
+                /<a href="/gioi-thieu-1">Giới thiệu</a>
+                /<a href="/collections/all">Sản phẩm</a>
+                /<a href="/tin-khuyen-mai-kangaroo">Khuyến mãi &amp; Sự kiện</a>
+                /<a href="/tin-thoi-su-kangaroo">Tin tức</a>
+            </div>
+            <div class="col-half text-center">www.KangarooHanoi.vn</div>
+        </div>
+    </footer>
+    <!-- End of footer !-->
+
+    <a href="" id="scrollUp"></a>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <script type="text/javascript" src="js/jquery.elevateZoom-3.0.8.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+        jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
+        jQuery('.quantity').each(function() {
+            var spinner = jQuery(this),
+                input = spinner.find('input[type="number"]'),
+                btnUp = spinner.find('.quantity-up'),
+                btnDown = spinner.find('.quantity-down'),
+                min = input.attr('min'),
+                max = input.attr('max');
+
+            btnUp.click(function() {
+                var oldValue = parseFloat(input.val());
+                if (oldValue >= max) {
+                    var newVal = oldValue;
+                } else {
+                    var newVal = oldValue + 1;
+                }
+                spinner.find("input").val(newVal);
+                spinner.find("input").trigger("change");
+            });
+
+            btnDown.click(function() {
+                var oldValue = parseFloat(input.val());
+                if (oldValue <= min) {
+                    var newVal = oldValue;
+                } else {
+                    var newVal = oldValue - 1;
+                }
+                spinner.find("input").val(newVal);
+                spinner.find("input").trigger("change");
+            });
+
+        });
+    </script>
+</body>
+
+</html>
