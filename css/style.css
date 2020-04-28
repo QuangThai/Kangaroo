@@ -478,16 +478,19 @@ html {
 
 .product-list {
     display: grid;
-    border: 1px solid #eee;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     height: 100%;
     width: 100%;
+    border: 1px solid #eee;
+  /*  display: flex;
+    flex-wrap: wrap;*/
 }
 
 .product-list .product-single {
     border-right: 1px solid #eee;
     border-bottom: 1px solid #eee;
+    /*flex : 0 0 calc(100%/3);*/
 }
 
 .product-list .product-single .product-desc {
@@ -525,7 +528,7 @@ html {
 }
 
 .product-single .product-img img.img-thumb {
-    max-width: 134px;
+    max-width: 140px;
     width: 100%;
     height: auto;
     margin-left: auto;
@@ -1123,8 +1126,8 @@ html {
 
 /*************************
   11. quick view (modal)
-*************************/
-.social-icons li {
+  *************************/
+  .social-icons li {
     list-style-type: none;
     transition: all 0.3s;
 }
